@@ -5,39 +5,52 @@
     <body>
        <div id="form_body">
         <form>
-           <div id="firstname">
-            <label>First Name:</label>
-            <input type="text">
+           <div id="firstname_div">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname">
+            <p id="firstname_para"></p>
            </div>
-           <div id="lastname">
-            <label>Last Name:</label>
-            <input type="text">
+
+           <div id="lastname_div">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname">
+            <p id="lastname_para"></p>
            </div>
-           <div id="email">
-            <label>E-mail:</label>
-            <input type="text">
+
+           <div id="email_div">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email">
+            <p id="email_para"></p>
            </div>
-           <div id="password">
-            <label>Password:</label>
-            <input type="text">
+
+           <div id="password_div">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <p id="password_para"></p>
            </div>
-           <div id="dob">
-            <label>Date of Birth:</label>
-            <input type="date">
+
+           <div id="dob_div">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+            <p id="dob_para"></p>
            </div>
-           <div id="gender">
-            <label>Gender:</label>
-            <select>
-                <option selected>Select a Gender</option>
-                <option>Male</option>
-                <option>Female</option>
+
+           <div id="gender_div">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value= "0" hidden selected>Select a Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
             </select>
+            <p id="gender_para"></p>
            </div>
+
            <div>
-            <button>Submit</button>
+            <button type="button" onclick="collectData()">Submit</button>
             <button>Reset</button>
            </div>
         </form>
        </div>
     </body>
+    <script src="web.js"></script>
 </html>
