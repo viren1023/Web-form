@@ -1,0 +1,35 @@
+body {
+    /* background-color: #03001C; */
+}
+#form_body {
+    /* border: 2px solid black; */
+    text-align: center;
+    /* width: ; */
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 2em; */
+    /* color: #916BBF; */
+    /* text-shadow: 2px 2px 3px#ab20fd; */
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    color: rgb(184, 89, 89);
+    font-family: monospace, Courier, 'Courier New';
+    /* font-size: .65em; */
+    margin-top:  0px;
+}
+
+input, select,  button {
+    /* height: 1em; */
+    padding: 3px;
+    /* font-size: 1em; */
+    /* border-style: none; */
+    /* background-color: #301E67; */
+    border-radius: 3px;
+    /* color: #E0C097; */
+    /* box-shadow: 3px 3px 6px #8E05C2; */
+}
