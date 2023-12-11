@@ -6,8 +6,6 @@ function collectData() {
     let pass = document.getElementById('password').value;
     let dob = document.getElementById('dob').value;
     let gender = document.getElementById('gender').value;
-    // console.log(firstName)
-    // console.log(gender);
 
     let formData = {
         firstName,
@@ -17,19 +15,13 @@ function collectData() {
         dob,
         gender,
     };
-
-    var jsonData = JSON.stringify(formData);
-    localStorage.setItem('formData',jsonData);
-    console.log(localStorage);
-    // console.log(formData.gender);
-
-    // Create an object with form data
     validateForm(formData);
 }
 
 function validateForm(data) {
     let fname = data.firstName.trim();
     let lname = data.lastName.trim();
+    let pop = 0;
     
     // firstname validation
     if(fname == '') {
@@ -46,6 +38,7 @@ function validateForm(data) {
         document.getElementById("firstname_para").innerHTML = ""
         document.getElementById("firstname").style.border = "1px solid black";
         document.getElementById("firstname").style.borderRadius = "3px";
+        pop++;
     }
     
     // lastname validation
@@ -63,6 +56,7 @@ function validateForm(data) {
         document.getElementById("lastname_para").innerHTML = "";
         document.getElementById("lastname").style.border = "1px solid black";
         document.getElementById("lastname").style.borderRadius = "3px";
+        pop++;
     }
 
     // email validation
@@ -80,6 +74,7 @@ function validateForm(data) {
         document.getElementById("email_para").innerHTML = "";
         document.getElementById("email").style.border = "1px solid black";
         document.getElementById("email").style.borderRadius = "3px";
+        pop++;
     }
 
     // password validation
@@ -97,6 +92,7 @@ function validateForm(data) {
         document.getElementById("password_para").innerHTML = "";
         document.getElementById("password").style.border = "1px solid black";
         document.getElementById("password").style.borderRadius = "3px";
+        pop++;
     }
 
     // date of birth validation
@@ -109,6 +105,7 @@ function validateForm(data) {
         document.getElementById("dob_para").innerHTML = "";
         document.getElementById("dob").style.border = "1px solid black";
         document.getElementById("dob").style.borderRadius = "3px";
+        pop++;
     }
     // gender option validation
     if(data.gender == 0) {
@@ -120,6 +117,15 @@ function validateForm(data) {
         document.getElementById("gender_para").innerHTML = "";
         document.getElementById("gender").style.border = "1px solid black";
         document.getElementById("gender").style.borderRadius = "3px";
+        pop++;
+    }
+
+    if(pop === 6) {
+        alert("The Form has been Submitted.");
+
+        var jsonData = JSON.stringify(data);
+    localStorage.setItem('formData',jsonData);
+    console.log(localStorage);
     }
 }
 

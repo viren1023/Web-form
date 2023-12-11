@@ -1,35 +1,86 @@
-body {
-    /* background-color: #03001C; */
-}
-#form_body {
-    /* border: 2px solid black; */
-    text-align: center;
-    /* width: ; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    /* font-size: 2em; */
-    /* color: #916BBF; */
-    /* text-shadow: 2px 2px 3px#ab20fd; */
+    background: linear-gradient(135deg, #71b7e6, #3DED97);
+  }
+#form_body {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-
 h1 {
-    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
 }
-
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
 p {
     color: rgb(184, 89, 89);
     font-family: monospace, Courier, 'Courier New';
-    /* font-size: .65em; */
-    margin-top:  0px;
+    margin-top: 0%;
 }
-
-input, select,  button {
-    /* height: 1em; */
-    padding: 3px;
-    /* font-size: 1em; */
-    /* border-style: none; */
-    /* background-color: #301E67; */
-    border-radius: 3px;
-    /* color: #E0C097; */
-    /* box-shadow: 3px 3px 6px #8E05C2; */
+#user_detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
 }
+input, select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+input:focus, select:focus {
+    border-color: #3DED97;
+}
+#firstname_div, #lastname_div, #email_div, #password_div, #dob_div, #gender_div {
+    margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+} 
+#submit_butt {
+   height: 45px;
+   width: 100%;
+   border-radius: 5px;
+   border: none;   
+   letter-spacing: 1px;
+   cursor: pointer;
+   background: linear-gradient(135deg, #71b7e6, #3DED97);
+}
+button:hover{
+    background: linear-gradient(-135deg, #71b7e6, #3DED97);
+    }
+button {
+    height: 45px;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   background: linear-gradient(135deg, #71b7e6, #3DED97);
+} 
