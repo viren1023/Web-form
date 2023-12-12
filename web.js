@@ -84,7 +84,7 @@ function validateForm(data) {
         document.getElementById("password").style.borderRadius = "3px";
     }
     else if(data.pass.length < 8) {
-        document.getElementById("password_para").innerHTML = "Password should contain maximum of 8 character.";
+        document.getElementById("password_para").innerHTML = "Password should contain minimun of 8 character.";
         document.getElementById("password").style.border = "solid red";
         document.getElementById("password").style.borderRadius = "3px";
     }
